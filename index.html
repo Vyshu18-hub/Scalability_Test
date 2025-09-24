@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website Scalability Tester</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Website Scalability Tester</h1>
+
+    <div class="test-config">
+      <input type="text" placeholder="Enter a website URL to test its scalability under simulated load" />
+      <button>Start Test</button>
+    </div>
+
+    <div class="summary">
+      <h2>Summary Statistics</h2>
+      <div class="stats">
+        <div class="stat-box">
+          <h3>Total Requests</h3>
+          <p>50</p>
+        </div>
+        <div class="stat-box success">
+          <h3>Successful</h3>
+          <p>47 (94%)</p>
+        </div>
+        <div class="stat-box fail">
+          <h3>Failed</h3>
+          <p>3</p>
+        </div>
+        <div class="stat-box">
+          <h3>Avg Response</h3>
+          <p>254ms</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="graphs">
+      <h2>Graphs</h2>
+      <div class="graph-placeholder">Response Time Over Time (Graph Placeholder)</div>
+      <div class="graph-placeholder">Success vs Failure Rate (Graph Placeholder)</div>
+    </div>
+  </div>
+</body>
+</html>
