@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Website Scalability Tester</title>
+</head>
+<body>
+  <h1>Website Scalability Tester</h1>
+  <form id="testForm">
+    <input type="text" id="url" placeholder="Enter website URL" required />
+    <button type="submit">Run Test</button>
+  </form>
+  <pre id="output"></pre>
+
+  <script>
+    const form = document.getElementById("testForm");
+    const output = document.getElementById("output");
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      output.textContent = "Running test...";
+      const url = document.getElementById("url").value;
+      const res = await fetch("/run-test", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ url })
+      });
+      const data = await res.json();
+      output.textContent = JSON.stringify(data, null, 2);
+    });
+  </script>
+</body>
+</html>
